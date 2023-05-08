@@ -1,0 +1,24 @@
+[Unit]
+Description=Prometheus PHP-FPM exporter
+
+[Service]
+Type=simple
+WorkingDirectory=/var/run/php
+User=www-data
+Group=www-data
+ExecStart=/usr/local/bin/php-fpm_exporter server --phpfpm.scrape-uri tcp://127.0.0.1:9000/status --phpfpm.fix-process-count
+#ExecStart=/usr/local/bin/php-fpm_exporter server --phpfpm.scrape-uri tcp://127.0.0.1:9000/status
+ReadWritePaths=/var/run/php/
+#ReadOnlyPaths=
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ProtectKernelTunables=true
+NoNewPrivileges=true
+ProtectKernelModules=true
+
+
+[Install]
+WantedBy=multi-user.target
+

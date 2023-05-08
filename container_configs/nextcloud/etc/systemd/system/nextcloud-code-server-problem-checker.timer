@@ -1,0 +1,9 @@
+[Unit]
+Description=Run nextcloud-code-server-problem-checker every 1 minute
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=multi-user.target

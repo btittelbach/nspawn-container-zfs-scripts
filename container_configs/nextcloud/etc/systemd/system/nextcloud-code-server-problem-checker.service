@@ -1,0 +1,11 @@
+[Unit]
+Description=Run nextcloud-code-server-problem-checker
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/nextcloud/
+User=root
+Group=root
+ExecStart=/usr/local/bin/code_server_problem_checker_phpfpm_killer.sh
+RemainAfterExit=false
+

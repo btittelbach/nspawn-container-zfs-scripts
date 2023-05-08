@@ -1,0 +1,9 @@
+[Unit]
+Description=Run nextcloud-cron every 4 minutes
+
+[Timer]
+OnBootSec=4min
+OnUnitActiveSec=4min
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=fix /tmp tmpfs size, since fstab and tmp.mount are ignored apparently
+Requires=tmp.mount
+After=tmp.mount
+
+[Service]
+Type=oneshot
+ExecStart=/bin/mount /tmp -o remount,size=4G
+
+[Install]
+WantedBy=basic.target

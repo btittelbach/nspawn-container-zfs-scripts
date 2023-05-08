@@ -1,0 +1,11 @@
+[Match]
+Virtualization=container
+Name=host0
+
+[Link]
+MTUBytes=1440
+
+[Network]
+DHCP=no
+Address=<TODO>
+

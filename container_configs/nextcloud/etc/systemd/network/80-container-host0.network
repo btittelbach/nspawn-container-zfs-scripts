@@ -1,0 +1,14 @@
+[Match]
+Virtualization=container
+Name=host0
+
+[Link]
+MTUBytes=1440
+
+[Network]
+DHCP=ipv6
+Address=<TODO>/24
+Gateway=<TODO>
+DNS=<TODO>
+
+

@@ -1,0 +1,12 @@
+[Match]
+Virtualization=container
+Name=wan0
+
+[Link]
+MTUBytes=1440
+
+[Network]
+DHCP=no
+Address=<TODO>
+Gateway=<TODO>
+
